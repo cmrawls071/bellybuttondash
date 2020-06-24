@@ -92,15 +92,15 @@ d3.json("samples.json").then(function(data) {
             return dataPoint.wfreq});
 
         // populate the panel body with the participant data 
-        var p = (`ID: ${id}\n
-        Ethnicity: ${ethnicity}\n
-        Gender: ${gender}\n
-        Age: ${age}\n
-        Location: ${location}\n
-        BB Type: ${bbtype}\n
+        var p = (`ID: ${id} <br>
+        Ethnicity: ${ethnicity}<br>
+        Gender: ${gender}<br>
+        Age: ${age}<br>
+        Location: ${location}<br>
+        BB Type: ${bbtype}<br>
         Wash Freq: ${wfreq}`)
 
-        panel.text(p)
+        panel.html(p)
 
         var selectedSamples = samples.filter(selectID);
         // console.log(selectedSamples);
